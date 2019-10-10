@@ -1,3 +1,4 @@
+
 public class hw2 {
     public static void main(String[] args){
 
@@ -21,7 +22,19 @@ public class hw2 {
         average/=mas.length;
         System.out.println("max = "+ max);
         System.out.println("min = "+ min);
-        System.out.println("average = "+ average);
-
+        System.out.println("average = "+ average); //конец первого задания
+        double k = 0d;
+        for (int i = 0; i < mas.length ; i++) {
+            for (int j = 0; j < (mas.length - 1) ; j++) {
+                if (mas[j]>mas[j+1]){
+                    k = mas[j];
+                    mas[j]=mas[j+1];
+                    mas[j+1] = k;
+                }
+            }
+        }
+        for (int i = 0; i < mas.length ; i++) {
+            System.out.print(mas[i]+"   ");
+        }
     }
 }
